@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="navbar">
+    <a class="navbar-brand" href="#">Title</a>
+    <button type="submit" class="btn btn-default pull-right navbar-btn">Login</button>
+</div>
+
+<div class="container">
+    <form name="f" method="POST" action="/login.html" class="well">
+        <fieldset>
+            <legend>Login</legend>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required/>
+            </div>
+
+            <input type="submit" class="btn btn-primary" name="submit" value="Login"/>
+
+            <div class="alert alert-danger" id="login_message" style="display: none">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Failed</strong> Username and password don't match
+            </div>
+
+            <div class="alert alert-success" id="logout_message" style="display: none">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success</strong> You have been logged out
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+<script src="/public/js/main.js"></script>
+</body>
+</html>
